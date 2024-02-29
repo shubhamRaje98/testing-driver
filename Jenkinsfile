@@ -9,9 +9,11 @@ pipeline {
             }
         }
         stage('Test') {
-            script{
-                def script = load "./test.groovy"
-                groovyScript.execute()
+            steps{
+                script{
+                    def script = load "./test.groovy"
+                    groovyScript.execute()
+                }
             }
             
         }
