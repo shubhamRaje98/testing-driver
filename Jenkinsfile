@@ -9,9 +9,9 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-                def script = load "./test.groovy"
-            }
+            
+            def script = load "./test.groovy"
+            
         }
         stage('Deploy') {
             steps {
